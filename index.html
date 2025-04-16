@@ -19,21 +19,35 @@
     }
 
     header {
-      text-align: center;
-      padding: 80px 20px 40px;
+      position: relative;
+      height: 80vh;
       background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E');
       background-size: cover;
-      background-position: center 80%;
-      color: var(--color-secundario);
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
     }
 
-    header h1 {
-      font-size: 2.5em;
-      margin-top: 60px;
-      margin-bottom: 10px;
+    .header-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 12px;
     }
 
-    nav.main-tabs {
+    .header-overlay h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .header-overlay p {
+      font-size: 1.3em;
+      margin-top: 10px;
+    }
+
+    nav {
       background-color: var(--color-terciario);
       text-align: center;
       padding: 15px 0;
@@ -42,17 +56,12 @@
       z-index: 100;
     }
 
-    nav.main-tabs a {
+    nav a {
       color: var(--color-secundario);
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
       font-size: 1.1em;
-    }
-
-    nav.main-tabs a.active-tab {
-      border-bottom: 2px solid #ffffff;
-      padding-bottom: 5px;
     }
 
     .section {
@@ -64,7 +73,6 @@
     .section h2 {
       font-size: 2em;
       margin-bottom: 20px;
-      color: var(--color-secundario);
     }
 
     .section p, .section li {
@@ -84,11 +92,6 @@
       padding: 20px;
       border-radius: 8px;
       margin-bottom: 30px;
-    }
-
-    .info-box h3 {
-      margin-top: 0;
-      color: var(--color-secundario);
     }
 
     .tabs {
@@ -126,7 +129,6 @@
       border-radius: 8px;
       padding: 10px;
       text-align: center;
-      color: var(--color-secundario);
     }
 
     .album img {
@@ -164,30 +166,31 @@
 <body>
 
 <header>
-  <h1>Damián Loiacono</h1>
-  <p>Asesor Inmobiliario - Coldwell Banker Beyker</p>
+  <div class="header-overlay">
+    <h1>Damián Loiacono</h1>
+    <p>Asesor Inmobiliario - Coldwell Banker Beyker</p>
+  </div>
 </header>
 
-<nav class="main-tabs">
-  <a href="#presentacion" data-tab="presentacion">Presentación</a>
-  <a href="#experiencia" data-tab="experiencia">Experiencia</a>
-  <a href="#servicios" data-tab="servicios">Servicios</a>
-  <a href="#fotos" data-tab="fotos">Fotos</a>
-  <a href="#contacto" data-tab="contacto">Contacto</a>
+<nav>
+  <a href="#presentacion">Presentación</a>
+  <a href="#experiencia">Experiencia</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#fotos">Fotos</a>
+  <a href="#contacto">Contacto</a>
 </nav>
 
-<section class="section main-tab" id="presentacion">
+<section class="section" id="presentacion">
   <h2>Sobre Mí</h2>
   <div class="info-box">
     <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f01e1" alt="Damián Loiacono" class="perfil-img">
-    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir. Trabajo con profesionalismo, transparencia y dedicación en cada etapa del proceso inmobiliario.</p>
+    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir.</p>
   </div>
 </section>
 
-<section class="section main-tab" id="experiencia">
+<section class="section" id="experiencia">
   <h2>Mi Experiencia</h2>
   <div class="info-box">
-    <p>Cuento con amplia trayectoria en el rubro inmobiliario, acompañando a clientes en decisiones importantes. La capacitación constante y el respaldo de una red internacional como Coldwell Banker me permiten brindar un servicio integral y actualizado.</p>
     <ul>
       <li>Especialista en ventas y alquileres residenciales y comerciales</li>
       <li>Conocimiento profundo del mercado de CABA y zonas aledañas</li>
@@ -196,10 +199,9 @@
   </div>
 </section>
 
-<section class="section main-tab" id="servicios">
+<section class="section" id="servicios">
   <h2>Servicios</h2>
   <div class="info-box">
-    <img src="AdobeStock_906480651.jpeg" alt="Servicios Inmobiliarios" style="width:100%; border-radius: 12px; margin-bottom: 20px;">
     <ul>
       <li>Compra y venta de inmuebles</li>
       <li>Alquiler de propiedades</li>
@@ -210,7 +212,7 @@
   </div>
 </section>
 
-<section class="section main-tab" id="fotos">
+<section class="section" id="fotos">
   <h2>Galería de Fotos</h2>
   <div class="tabs">
     <div class="tab active-tab" data-tab="propiedades">Propiedades</div>
@@ -246,7 +248,7 @@
   </div>
 </section>
 
-<section class="section main-tab" id="contacto">
+<section class="section" id="contacto">
   <h2>Contacto</h2>
   <div class="info-box">
     <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
@@ -262,7 +264,6 @@
   <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
 </footer>
 
-<!-- JavaScript para tabs de fotos -->
 <script>
   const tabs = document.querySelectorAll('.tab');
   const contents = document.querySelectorAll('.album-content');
@@ -271,38 +272,11 @@
     tab.addEventListener('click', () => {
       contents.forEach(content => content.style.display = 'none');
       tabs.forEach(t => t.classList.remove('active-tab'));
+
       const targetId = tab.getAttribute('data-tab');
       document.getElementById(targetId).style.display = 'block';
       tab.classList.add('active-tab');
     });
-  });
-</script>
-
-<!-- JavaScript para pestañas principales -->
-<script>
-  const mainTabs = document.querySelectorAll('.main-tabs a');
-  const mainSections = document.querySelectorAll('.main-tab');
-
-  function showSection(id) {
-    mainSections.forEach(section => {
-      section.style.display = (section.id === id) ? 'block' : 'none';
-    });
-
-    mainTabs.forEach(tab => {
-      tab.classList.toggle('active-tab', tab.getAttribute('data-tab') === id);
-    });
-  }
-
-  mainTabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = tab.getAttribute('data-tab');
-      showSection(targetId);
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    showSection('presentacion');
   });
 </script>
 
