@@ -19,32 +19,20 @@
     }
 
     header {
-      position: relative;
-      height: 80vh;
-      background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      color: white;
+      padding: 40px 20px 20px;
+      color: var(--color-secundario);
     }
 
-    .header-overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      border-radius: 12px;
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
-    .header-overlay h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-
-    .header-overlay p {
-      font-size: 1.3em;
-      margin-top: 10px;
+    .header-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
     }
 
     nav {
@@ -73,6 +61,7 @@
     .section h2 {
       font-size: 2em;
       margin-bottom: 20px;
+      color: var(--color-secundario);
     }
 
     .section p, .section li {
@@ -92,6 +81,11 @@
       padding: 20px;
       border-radius: 8px;
       margin-bottom: 30px;
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: var(--color-secundario);
     }
 
     .tabs {
@@ -129,6 +123,7 @@
       border-radius: 8px;
       padding: 10px;
       text-align: center;
+      color: var(--color-secundario);
     }
 
     .album img {
@@ -166,11 +161,11 @@
 <body>
 
 <header>
-  <div class="header-overlay">
-    <h1>Damián Loiacono</h1>
-    <p>Asesor Inmobiliario - Coldwell Banker Beyker</p>
-  </div>
+  <h1>Damián Loiacono</h1>
+  <p>Asesor Inmobiliario - Coldwell Banker Beyker</p>
 </header>
+
+<img src="https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E" alt="Encabezado" class="header-image">
 
 <nav>
   <a href="#presentacion">Presentación</a>
@@ -184,13 +179,14 @@
   <h2>Sobre Mí</h2>
   <div class="info-box">
     <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f01e1" alt="Damián Loiacono" class="perfil-img">
-    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir.</p>
+    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir. Trabajo con profesionalismo, transparencia y dedicación en cada etapa del proceso inmobiliario.</p>
   </div>
 </section>
 
 <section class="section" id="experiencia">
   <h2>Mi Experiencia</h2>
   <div class="info-box">
+    <p>Cuento con amplia trayectoria en el rubro inmobiliario, acompañando a clientes en decisiones importantes. La capacitación constante y el respaldo de una red internacional como Coldwell Banker me permiten brindar un servicio integral y actualizado.</p>
     <ul>
       <li>Especialista en ventas y alquileres residenciales y comerciales</li>
       <li>Conocimiento profundo del mercado de CABA y zonas aledañas</li>
@@ -202,6 +198,7 @@
 <section class="section" id="servicios">
   <h2>Servicios</h2>
   <div class="info-box">
+    <img src="AdobeStock_906480651.jpeg" alt="Servicios Inmobiliarios" style="width:100%; border-radius: 12px; margin-bottom: 20px;">
     <ul>
       <li>Compra y venta de inmuebles</li>
       <li>Alquiler de propiedades</li>
