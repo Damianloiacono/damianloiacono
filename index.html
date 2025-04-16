@@ -20,16 +20,16 @@
 
     header {
       text-align: center;
-      padding: 80px 20px 40px; /* reducido el padding superior e inferior */
+      padding: 80px 20px 40px;
       background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E');
       background-size: cover;
-      background-position: center 80%; /* bajada la imagen aún más */
+      background-position: center 80%;
       color: var(--color-secundario);
     }
 
     header h1 {
       font-size: 2.5em;
-      margin-top: 60px; /* bajado el título */
+      margin-top: 60px;
       margin-bottom: 10px;
     }
 
@@ -102,6 +102,12 @@
 
     .tab:hover {
       background-color: #ffffff20;
+    }
+
+    .active-tab {
+      background-color: #ffffff30;
+      font-weight: bold;
+      border: 1px solid #ffffff30;
     }
 
     .album-grid {
@@ -202,42 +208,29 @@
 <section class="section" id="fotos">
   <h2>Galería de Fotos</h2>
   <div class="tabs">
-    <div class="tab">Propiedades</div>
-    <div class="tab">Clientes</div>
-    <div class="tab">Recorridos</div>
+    <div class="tab active-tab" data-tab="propiedades">Propiedades</div>
+    <div class="tab" data-tab="clientes">Clientes</div>
+    <div class="tab" data-tab="recorridos">Recorridos</div>
   </div>
-  <div class="album-grid">
-    <div class="album">
-      <img src="https://via.placeholder.com/300x200?text=Álbum+1" alt="Álbum 1">
-      <p>Propiedades destacadas</p>
-    </div>
-    <div class="album">
-      <img src="https://via.placeholder.com/300x200?text=Álbum+2" alt="Álbum 2">
-      <p>Testimonios de clientes</p>
-    </div>
-    <div class="album">
-      <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Álbum 3">
-      <p>Recorridos virtuales</p>
+
+  <div class="album-content" id="propiedades">
+    <div class="album-grid">
+      <div class="album">
+        <img src="https://via.placeholder.com/300x200?text=Álbum+1" alt="Propiedades">
+        <p>Propiedades destacadas</p>
+      </div>
     </div>
   </div>
-</section>
 
-<section class="section" id="contacto">
-  <h2>Contacto</h2>
-  <div class="info-box">
-    <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
-    <p><strong>Tel:</strong> <a href="tel:+541138795613" style="color: #ffffff; text-decoration: underline;">+54 9 11 3879 5613</a></p>
-    <p><strong>Email:</strong> <a href="mailto:damian.loiacono@coldwellbanker.com.ar" style="color: #ffffff; text-decoration: underline;">damian.loiacono@coldwellbanker.com.ar</a></p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #00acee;">@damianloiacono.ar</a></p>
+  <div class="album-content" id="clientes" style="display:none;">
+    <div class="album-grid">
+      <div class="album">
+        <img src="https://via.placeholder.com/300x200?text=Álbum+2" alt="Clientes">
+        <p>Testimonios de clientes</p>
+      </div>
+    </div>
   </div>
-</section>
 
-<a href="https://wa.me/5491138795613" class="whatsapp-btn" title="Habla por WhatsApp">📞</a>
-
-<footer>
-  <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
-</footer>
-
-</body>
-</html>
-
+  <div class="album-content" id="recorridos" style="display:none;">
+    <div class="album-grid">
+      <
