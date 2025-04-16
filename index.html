@@ -20,12 +20,16 @@
 
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
+      background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E');
+      background-size: cover;
+      background-position: center;
+      color: var(--color-secundario);
     }
 
     header img {
-      width: 150px;
-      margin-bottom: 20px;
+      width: 200px;
+      margin-bottom: 10px;
     }
 
     header h1 {
@@ -86,6 +90,27 @@
       color: var(--color-secundario);
     }
 
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .album {
+      background-color: #ffffff10;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      color: var(--color-secundario);
+    }
+
+    .album img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -124,6 +149,7 @@
   <a href="#presentacion">Presentación</a>
   <a href="#experiencia">Experiencia</a>
   <a href="#servicios">Servicios</a>
+  <a href="#fotos">Fotos</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
@@ -161,6 +187,24 @@
   </div>
 </section>
 
+<section class="section" id="fotos">
+  <h2>Galería de Fotos</h2>
+  <div class="album-grid">
+    <div class="album">
+      <img src="https://via.placeholder.com/300x200?text=Álbum+1" alt="Álbum 1">
+      <p>Propiedades destacadas</p>
+    </div>
+    <div class="album">
+      <img src="https://via.placeholder.com/300x200?text=Álbum+2" alt="Álbum 2">
+      <p>Testimonios de clientes</p>
+    </div>
+    <div class="album">
+      <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Álbum 3">
+      <p>Recorridos virtuales</p>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="contacto">
   <h2>Contacto</h2>
   <div class="info-box">
@@ -179,4 +223,3 @@
 
 </body>
 </html>
-
