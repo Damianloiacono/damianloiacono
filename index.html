@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coldwell Banker Beyker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Damián Loiacono - Asesor Inmobiliario</title>
   <style>
     :root {
       --color-primario: #012169;
@@ -11,214 +11,167 @@
       --color-terciario: #000000;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--color-secundario);
-      color: var(--color-terciario);
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
       background-color: var(--color-primario);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      z-index: 999;
-    }
-
-    nav h1 {
       color: var(--color-secundario);
-      font-size: 1.5em;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: var(--color-secundario);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #cccccc;
     }
 
     header {
-      background: url("/mnt/data/10.png") repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 70px;
-    }
-
-    header h2 {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: var(--color-secundario);
-      padding: 20px 40px;
-      border-radius: 10px;
-      font-size: 2.2em;
       text-align: center;
+      padding: 50px 20px;
     }
 
-    .section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .section img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-
-    .section h2 {
-      color: var(--color-primario);
-      margin-bottom: 10px;
-      font-size: 1.8em;
-    }
-
-    .section p {
-      font-size: 1.1em;
-      color: var(--color-terciario);
+    header img {
+      width: 100px;
       margin-bottom: 20px;
     }
 
-    .section a.boton {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: var(--color-primario);
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: var(--color-terciario);
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav a {
       color: var(--color-secundario);
       text-decoration: none;
-      border-radius: 8px;
+      margin: 0 20px;
       font-weight: bold;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
+      font-size: 1.1em;
     }
 
-    .section a.boton:hover {
-      background-color: #021c57;
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
-    footer {
-      background-color: var(--color-primario);
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
       color: var(--color-secundario);
-      text-align: center;
-      padding: 20px;
     }
 
-    .whatsapp-button {
+    .section p, .section li {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .perfil-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .info-box {
+      background-color: #ffffff10;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: var(--color-secundario);
+    }
+
+    .whatsapp-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25d366;
-      color: var(--color-secundario);
+      background-color: #25D366;
+      color: white;
+      border: none;
       border-radius: 50%;
       width: 60px;
       height: 60px;
       font-size: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       z-index: 1000;
     }
 
-    .whatsapp-button:hover {
-      background-color: #1ebc5c;
+    footer {
+      background-color: var(--color-terciario);
+      color: var(--color-secundario);
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <h1>CB Beyker</h1>
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Coldwell_Banker_logo.svg/2560px-Coldwell_Banker_logo.svg.png" alt="Coldwell Banker Logo" />
+  <h1>Damián Loiacono</h1>
+  <p>Asesor Inmobiliario - Coldwell Banker Beyker</p>
+</header>
+
+<nav>
+  <a href="#presentacion">Presentación</a>
+  <a href="#experiencia">Experiencia</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="section" id="presentacion">
+  <h2>Sobre Mí</h2>
+  <div class="info-box">
+    <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f01e1" alt="Damián Loiacono" class="perfil-img">
+    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir. Trabajo con profesionalismo, transparencia y dedicación en cada etapa del proceso inmobiliario.</p>
+  </div>
+</section>
+
+<section class="section" id="experiencia">
+  <h2>Mi Experiencia</h2>
+  <div class="info-box">
+    <p>Cuento con amplia trayectoria en el rubro inmobiliario, acompañando a clientes en decisiones importantes. La capacitación constante y el respaldo de una red internacional como Coldwell Banker me permiten brindar un servicio integral y actualizado.</p>
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#propiedades">Propiedades</a></li>
-      <li><a href="#asesoria">Asesoría</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li>Especialista en ventas y alquileres residenciales y comerciales</li>
+      <li>Conocimiento profundo del mercado de CABA y zonas aledañas</li>
+      <li>Red de contactos para asesoramiento legal y financiero</li>
     </ul>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <header id="inicio">
-    <h2>Bienvenido a Coldwell Banker Beyker</h2>
-  </header>
+<section class="section" id="servicios">
+  <h2>Servicios</h2>
+  <div class="info-box">
+    <ul>
+      <li>Compra y venta de inmuebles</li>
+      <li>Alquiler de propiedades</li>
+      <li>Asesoramiento personalizado y gratuito</li>
+      <li>Tasaciones y estudios de mercado</li>
+      <li>Acompañamiento legal y financiero</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- NOSOTROS -->
-  <section class="section" id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>En <strong>Coldwell Banker Beyker</strong>, nos dedicamos a brindar asesoría profesional y personalizada en la compra, venta y renta de bienes raíces.</p>
-    <img src="/mnt/data/CB_GYH_23_Student.jpg" alt="Equipo inmobiliario">
-    <a href="#contacto" class="boton">Contáctanos</a>
-  </section>
+<section class="section" id="contacto">
+  <h2>Contacto</h2>
+  <div class="info-box">
+    <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
+    <p><strong>Tel:</strong> +54 9 11 3879 5613</p>
+    <p><strong>Email:</strong> damian.loiacono@coldwellbanker.com.ar</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #00acee;">@damianloiacono.ar</a></p>
+  </div>
+</section>
 
-  <!-- PROPIEDADES -->
-  <section class="section" id="propiedades">
-    <h2>Nuestras Propiedades</h2>
-    <p>Explora una selección exclusiva de propiedades residenciales, comerciales y terrenos disponibles para ti.</p>
-    <img src="/mnt/data/25_House-4_D_5623.jpg" alt="Casa en venta">
-    <a href="#contacto" class="boton">Solicita más info</a>
-  </section>
+<a href="https://wa.me/5491138795613" class="whatsapp-btn" title="Habla por WhatsApp">📞</a>
 
-  <!-- ASESORÍA -->
-  <section class="section" id="asesoria">
-    <h2>Asesoría</h2>
-    <p>
-      ¿Estás buscando vender, comprar o alquilar una propiedad pero no sabes por dónde empezar? 
-      Damián Loiácono, asesor inmobiliario con experiencia en el mercado y parte de la prestigiosa firma <strong>Coldwell Banker Beyker</strong>, 
-      te ofrece una <strong>asesoría gratuita y personalizada</strong> para ayudarte a tomar decisiones con confianza y respaldo profesional.
-    </p>
-    <p>
-      Desde el primer contacto recibirás orientación clara, honesta y adaptada a tus necesidades. Ya sea para valorar tu propiedad, 
-      conocer opciones de inversión o entender los procesos legales, contarás con el acompañamiento necesario en cada paso.
-    </p>
-    <p>
-      ¡No tiene ningún costo! La primera consulta es totalmente gratuita y sin compromiso.
-    </p>
-    <a href="#contacto" class="boton">Solicitar Asesoría</a>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="section" id="contacto">
-    <h2>Contáctanos</h2>
-    <p>¿Tienes alguna duda o necesitas asesoría? Nuestro equipo está listo para ayudarte. Escríbenos por WhatsApp o correo electrónico.</p>
-    <p><strong>Email:</strong> contacto@coldwellbeyker.com<br>
-       <strong>Tel:</strong> +54 9 11 3879 5613</p>
-    <a href="https://wa.me/5491138795613" class="boton" target="_blank">Escríbenos por WhatsApp</a>
-  </section>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/5491138795613" target="_blank" class="whatsapp-button" title="Chatea con nosotros">
-    💬
-  </a>
-
-  <footer>
-    &copy; 2025 Coldwell Banker Beyker. Todos los derechos reservados.
-  </footer>
+<footer>
+  <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
+</footer>
 
 </body>
 </html>
