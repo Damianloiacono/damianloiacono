@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Coldwell Banker Beyker</title>
   <style>
     :root {
@@ -11,32 +11,73 @@
       --color-terciario: #000000;
     }
 
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--color-secundario);
       color: var(--color-terciario);
     }
 
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--color-primario);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 999;
+    }
+
+    nav h1 {
+      color: var(--color-secundario);
+      font-size: 1.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: var(--color-secundario);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #cccccc;
+    }
+
     header {
       background: url("/mnt/data/10.png") repeat;
-      height: 250px;
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: 70px;
+    }
+
+    header h2 {
+      background-color: rgba(0, 0, 0, 0.6);
       color: var(--color-secundario);
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-size: 2.2em;
       text-align: center;
     }
 
-    header h1 {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px 40px;
-      border-radius: 10px;
-      font-size: 2em;
-    }
-
     .section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
       text-align: center;
@@ -44,21 +85,45 @@
 
     .section img {
       width: 100%;
-      max-height: 500px;
+      max-height: 400px;
       object-fit: cover;
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
     .section h2 {
-      margin-bottom: 10px;
       color: var(--color-primario);
+      margin-bottom: 10px;
       font-size: 1.8em;
     }
 
     .section p {
-      color: var(--color-terciario);
       font-size: 1.1em;
+      color: var(--color-terciario);
+      margin-bottom: 20px;
+    }
+
+    .section a.boton {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--color-primario);
+      color: var(--color-secundario);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .section a.boton:hover {
+      background-color: #021c57;
+    }
+
+    footer {
+      background-color: var(--color-primario);
+      color: var(--color-secundario);
+      text-align: center;
+      padding: 20px;
     }
 
     .whatsapp-button {
@@ -82,36 +147,72 @@
     .whatsapp-button:hover {
       background-color: #1ebc5c;
     }
-
-    footer {
-      background-color: var(--color-primario);
-      color: var(--color-secundario);
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Coldwell Banker Beyker</h1>
+  <!-- NAV -->
+  <nav>
+    <h1>CB Beyker</h1>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#propiedades">Propiedades</a></li>
+      <li><a href="#asesoria">Asesoría</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio">
+    <h2>Bienvenido a Coldwell Banker Beyker</h2>
   </header>
 
-  <div class="section">
-    <h2>Trabaja con Nosotros</h2>
-    <img src="/mnt/data/CB_GYH_23_Student.jpg" alt="Reunión de equipo">
-    <p>Únete a <strong>Coldwell Banker Beyker</strong> y sé parte de un equipo que impulsa la innovación y el crecimiento en bienes raíces.</p>
-  </div>
+  <!-- NOSOTROS -->
+  <section class="section" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>En <strong>Coldwell Banker Beyker</strong>, nos dedicamos a brindar asesoría profesional y personalizada en la compra, venta y renta de bienes raíces.</p>
+    <img src="/mnt/data/CB_GYH_23_Student.jpg" alt="Equipo inmobiliario">
+    <a href="#contacto" class="boton">Contáctanos</a>
+  </section>
 
-  <div class="section">
-    <h2>Encuentra tu Hogar Ideal</h2>
-    <img src="/mnt/data/25_House-4_D_5623.jpg" alt="Casa familiar">
-    <p>En <strong>Coldwell Banker Beyker</strong> te ayudamos a encontrar el hogar de tus sueños con un servicio personalizado y profesional.</p>
-  </div>
+  <!-- PROPIEDADES -->
+  <section class="section" id="propiedades">
+    <h2>Nuestras Propiedades</h2>
+    <p>Explora una selección exclusiva de propiedades residenciales, comerciales y terrenos disponibles para ti.</p>
+    <img src="/mnt/data/25_House-4_D_5623.jpg" alt="Casa en venta">
+    <a href="#contacto" class="boton">Solicita más info</a>
+  </section>
 
-  <!-- Botón de WhatsApp -->
-  <a href="https://wa.me/5215555555555" target="_blank" class="whatsapp-button" title="Escríbenos por WhatsApp">
+  <!-- ASESORÍA -->
+  <section class="section" id="asesoria">
+    <h2>Asesoría</h2>
+    <p>
+      ¿Estás buscando vender, comprar o alquilar una propiedad pero no sabes por dónde empezar? 
+      Damián Loiácono, asesor inmobiliario con experiencia en el mercado y parte de la prestigiosa firma <strong>Coldwell Banker Beyker</strong>, 
+      te ofrece una <strong>asesoría gratuita y personalizada</strong> para ayudarte a tomar decisiones con confianza y respaldo profesional.
+    </p>
+    <p>
+      Desde el primer contacto recibirás orientación clara, honesta y adaptada a tus necesidades. Ya sea para valorar tu propiedad, 
+      conocer opciones de inversión o entender los procesos legales, contarás con el acompañamiento necesario en cada paso.
+    </p>
+    <p>
+      ¡No tiene ningún costo! La primera consulta es totalmente gratuita y sin compromiso.
+    </p>
+    <a href="#contacto" class="boton">Solicitar Asesoría</a>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes alguna duda o necesitas asesoría? Nuestro equipo está listo para ayudarte. Escríbenos por WhatsApp o correo electrónico.</p>
+    <p><strong>Email:</strong> contacto@coldwellbeyker.com<br>
+       <strong>Tel:</strong> +54 9 11 3879 5613</p>
+    <a href="https://wa.me/5491138795613" class="boton" target="_blank">Escríbenos por WhatsApp</a>
+  </section>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/5491138795613" target="_blank" class="whatsapp-button" title="Chatea con nosotros">
     💬
   </a>
 
