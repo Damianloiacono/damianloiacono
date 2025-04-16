@@ -20,16 +20,16 @@
 
     header {
       text-align: center;
-      padding: 160px 20px 40px; /* Aumentado padding superior */
+      padding: 80px 20px 40px; /* reducido el padding superior e inferior */
       background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E');
       background-size: cover;
-      background-position: center 98%; /* Imagen aún más baja */
+      background-position: center 80%; /* bajada la imagen aún más */
       color: var(--color-secundario);
     }
 
     header h1 {
       font-size: 2.5em;
-      margin-top: 130px; /* Título más abajo */
+      margin-top: 60px; /* bajado el título */
       margin-bottom: 10px;
     }
 
@@ -126,26 +126,20 @@
 
     .whatsapp-btn {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      bottom: 20px;
+      right: 20px;
       background-color: #25D366;
       color: white;
       border: none;
-      border-radius: 30px;
-      padding: 12px 20px;
-      font-size: 16px;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      text-align: center;
+      line-height: 60px;
       cursor: pointer;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
       z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-
-    .whatsapp-btn img {
-      width: 24px;
-      height: 24px;
     }
 
     footer {
@@ -171,12 +165,79 @@
   <a href="#contacto">Contacto</a>
 </nav>
 
-<a href="https://wa.me/5491138795613" class="whatsapp-btn" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-  WhatsApp
-</a>
+<section class="section" id="presentacion">
+  <h2>Sobre Mí</h2>
+  <div class="info-box">
+    <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f01e1" alt="Damián Loiacono" class="perfil-img">
+    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir. Trabajo con profesionalismo, transparencia y dedicación en cada etapa del proceso inmobiliario.</p>
+  </div>
+</section>
 
-<!-- Aquí irían las secciones del sitio web como presentación, experiencia, servicios, fotos y contacto -->
+<section class="section" id="experiencia">
+  <h2>Mi Experiencia</h2>
+  <div class="info-box">
+    <p>Cuento con amplia trayectoria en el rubro inmobiliario, acompañando a clientes en decisiones importantes. La capacitación constante y el respaldo de una red internacional como Coldwell Banker me permiten brindar un servicio integral y actualizado.</p>
+    <ul>
+      <li>Especialista en ventas y alquileres residenciales y comerciales</li>
+      <li>Conocimiento profundo del mercado de CABA y zonas aledañas</li>
+      <li>Red de contactos para asesoramiento legal y financiero</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="servicios">
+  <h2>Servicios</h2>
+  <div class="info-box">
+    <img src="AdobeStock_906480651.jpeg" alt="Servicios Inmobiliarios" style="width:100%; border-radius: 12px; margin-bottom: 20px;">
+    <ul>
+      <li>Compra y venta de inmuebles</li>
+      <li>Alquiler de propiedades</li>
+      <li>Asesoramiento personalizado y gratuito</li>
+      <li>Tasaciones y estudios de mercado</li>
+      <li>Acompañamiento legal y financiero</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="fotos">
+  <h2>Galería de Fotos</h2>
+  <div class="tabs">
+    <div class="tab">Propiedades</div>
+    <div class="tab">Clientes</div>
+    <div class="tab">Recorridos</div>
+  </div>
+  <div class="album-grid">
+    <div class="album">
+      <img src="https://via.placeholder.com/300x200?text=Álbum+1" alt="Álbum 1">
+      <p>Propiedades destacadas</p>
+    </div>
+    <div class="album">
+      <img src="https://via.placeholder.com/300x200?text=Álbum+2" alt="Álbum 2">
+      <p>Testimonios de clientes</p>
+    </div>
+    <div class="album">
+      <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Álbum 3">
+      <p>Recorridos virtuales</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <h2>Contacto</h2>
+  <div class="info-box">
+    <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
+    <p><strong>Tel:</strong> <a href="tel:+541138795613" style="color: #ffffff; text-decoration: underline;">+54 9 11 3879 5613</a></p>
+    <p><strong>Email:</strong> <a href="mailto:damian.loiacono@coldwellbanker.com.ar" style="color: #ffffff; text-decoration: underline;">damian.loiacono@coldwellbanker.com.ar</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #00acee;">@damianloiacono.ar</a></p>
+  </div>
+</section>
+
+<a href="https://wa.me/5491138795613" class="whatsapp-btn" title="Habla por WhatsApp">📞</a>
+
+<footer>
+  <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
+</footer>
 
 </body>
 </html>
+
