@@ -33,7 +33,7 @@
       margin-bottom: 10px;
     }
 
-    nav {
+    nav.main-tabs {
       background-color: var(--color-terciario);
       text-align: center;
       padding: 15px 0;
@@ -42,12 +42,17 @@
       z-index: 100;
     }
 
-    nav a {
+    nav.main-tabs a {
       color: var(--color-secundario);
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
       font-size: 1.1em;
+    }
+
+    nav.main-tabs a.active-tab {
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 5px;
     }
 
     .section {
@@ -163,15 +168,15 @@
   <p>Asesor Inmobiliario - Coldwell Banker Beyker</p>
 </header>
 
-<nav>
-  <a href="#presentacion">Presentación</a>
-  <a href="#experiencia">Experiencia</a>
-  <a href="#servicios">Servicios</a>
-  <a href="#fotos">Fotos</a>
-  <a href="#contacto">Contacto</a>
+<nav class="main-tabs">
+  <a href="#presentacion" data-tab="presentacion">Presentación</a>
+  <a href="#experiencia" data-tab="experiencia">Experiencia</a>
+  <a href="#servicios" data-tab="servicios">Servicios</a>
+  <a href="#fotos" data-tab="fotos">Fotos</a>
+  <a href="#contacto" data-tab="contacto">Contacto</a>
 </nav>
 
-<section class="section" id="presentacion">
+<section class="section main-tab" id="presentacion">
   <h2>Sobre Mí</h2>
   <div class="info-box">
     <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f01e1" alt="Damián Loiacono" class="perfil-img">
@@ -179,7 +184,7 @@
   </div>
 </section>
 
-<section class="section" id="experiencia">
+<section class="section main-tab" id="experiencia">
   <h2>Mi Experiencia</h2>
   <div class="info-box">
     <p>Cuento con amplia trayectoria en el rubro inmobiliario, acompañando a clientes en decisiones importantes. La capacitación constante y el respaldo de una red internacional como Coldwell Banker me permiten brindar un servicio integral y actualizado.</p>
@@ -191,7 +196,7 @@
   </div>
 </section>
 
-<section class="section" id="servicios">
+<section class="section main-tab" id="servicios">
   <h2>Servicios</h2>
   <div class="info-box">
     <img src="AdobeStock_906480651.jpeg" alt="Servicios Inmobiliarios" style="width:100%; border-radius: 12px; margin-bottom: 20px;">
@@ -205,7 +210,7 @@
   </div>
 </section>
 
-<section class="section" id="fotos">
+<section class="section main-tab" id="fotos">
   <h2>Galería de Fotos</h2>
   <div class="tabs">
     <div class="tab active-tab" data-tab="propiedades">Propiedades</div>
@@ -241,7 +246,7 @@
   </div>
 </section>
 
-<section class="section" id="contacto">
+<section class="section main-tab" id="contacto">
   <h2>Contacto</h2>
   <div class="info-box">
     <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
@@ -257,26 +262,47 @@
   <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
 </footer>
 
-<!-- JavaScript para tabs -->
+<!-- JavaScript para tabs de fotos -->
 <script>
   const tabs = document.querySelectorAll('.tab');
   const contents = document.querySelectorAll('.album-content');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      // Ocultar todos los contenidos
       contents.forEach(content => content.style.display = 'none');
-
-      // Remover clase activa de todas las pestañas
       tabs.forEach(t => t.classList.remove('active-tab'));
-
-      // Mostrar el contenido correspondiente
       const targetId = tab.getAttribute('data-tab');
       document.getElementById(targetId).style.display = 'block';
-
-      // Marcar la pestaña como activa
       tab.classList.add('active-tab');
     });
+  });
+</script>
+
+<!-- JavaScript para pestañas principales -->
+<script>
+  const mainTabs = document.querySelectorAll('.main-tabs a');
+  const mainSections = document.querySelectorAll('.main-tab');
+
+  function showSection(id) {
+    mainSections.forEach(section => {
+      section.style.display = (section.id === id) ? 'block' : 'none';
+    });
+
+    mainTabs.forEach(tab => {
+      tab.classList.toggle('active-tab', tab.getAttribute('data-tab') === id);
+    });
+  }
+
+  mainTabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = tab.getAttribute('data-tab');
+      showSection(targetId);
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    showSection('presentacion');
   });
 </script>
 
