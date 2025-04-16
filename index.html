@@ -233,4 +233,52 @@
 
   <div class="album-content" id="recorridos" style="display:none;">
     <div class="album-grid">
-      <
+      <div class="album">
+        <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Recorridos">
+        <p>Recorridos virtuales</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <h2>Contacto</h2>
+  <div class="info-box">
+    <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
+    <p><strong>Tel:</strong> <a href="tel:+541138795613" style="color: #ffffff; text-decoration: underline;">+54 9 11 3879 5613</a></p>
+    <p><strong>Email:</strong> <a href="mailto:damian.loiacono@coldwellbanker.com.ar" style="color: #ffffff; text-decoration: underline;">damian.loiacono@coldwellbanker.com.ar</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #00acee;">@damianloiacono.ar</a></p>
+  </div>
+</section>
+
+<a href="https://wa.me/5491138795613" class="whatsapp-btn" title="Habla por WhatsApp">📞</a>
+
+<footer>
+  <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
+</footer>
+
+<!-- JavaScript para tabs -->
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.album-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Ocultar todos los contenidos
+      contents.forEach(content => content.style.display = 'none');
+
+      // Remover clase activa de todas las pestañas
+      tabs.forEach(t => t.classList.remove('active-tab'));
+
+      // Mostrar el contenido correspondiente
+      const targetId = tab.getAttribute('data-tab');
+      document.getElementById(targetId).style.display = 'block';
+
+      // Marcar la pestaña como activa
+      tab.classList.add('active-tab');
+    });
+  });
+</script>
+
+</body>
+</html>
