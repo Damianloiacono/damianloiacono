@@ -20,16 +20,16 @@
 
     header {
       text-align: center;
-      padding: 80px 20px 40px; /* reducido el padding superior e inferior */
+      padding: 100px 20px 40px;
       background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E');
       background-size: cover;
-      background-position: center 80%; /* bajada la imagen aún más */
+      background-position: center 90%;
       color: var(--color-secundario);
     }
 
     header h1 {
       font-size: 2.5em;
-      margin-top: 60px; /* bajado el título */
+      margin-top: 100px;
       margin-bottom: 10px;
     }
 
@@ -131,15 +131,21 @@
       background-color: #25D366;
       color: white;
       border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 30px;
-      text-align: center;
-      line-height: 60px;
+      border-radius: 30px;
+      padding: 12px 20px;
+      font-size: 16px;
       cursor: pointer;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-btn img {
+      width: 24px;
+      height: 24px;
     }
 
     footer {
@@ -165,13 +171,10 @@
   <a href="#contacto">Contacto</a>
 </nav>
 
-<section class="section" id="presentacion">
-  <h2>Sobre Mí</h2>
-  <div class="info-box">
-    <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f01e1" alt="Damián Loiacono" class="perfil-img">
-    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir. Trabajo con profesionalismo, transparencia y dedicación en cada etapa del proceso inmobiliario.</p>
-  </div>
-</section>
+<a href="https://wa.me/5491138795613" class="whatsapp-btn" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  WhatsApp
+</a>
 
 <section class="section" id="experiencia">
   <h2>Mi Experiencia</h2>
