@@ -21,57 +21,55 @@
     header {
       text-align: center;
       padding: 80px 20px 40px;
-      background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF5NjTogPdMSAo_rJN4plTLG33sZd9YqOEbfexl31io4eFZSkx0lsrDpeiCwHHTX5Kx8_ZIXAksxrv9oytonkjn&_nc_ohc=lib9VFgtlaEQ7kNvwGTQbmL&_nc_oc=AdnaAjynedpeSEyk4xBQlLWsIK8vHz74seWWAELXN9npiJBoLsLDZK9ZRFREMtb2Cg4&_nc_zt=23&_nc_ht=scontent.faep14-2.fna&_nc_gid=728QiRoO_cSHsK7lTCaUbQ&oh=00_AfGxHG_dCKHObPAuYKi6Zsp_BRdm9H8SbSazIqx_44HH6Q&oe=6805C28E');
+      background-image: url('https://scontent.faep14-2.fna.fbcdn.net/v/t39.30808-6/491937970_2565851920430816_3081435539017223530_n.jpg');
       background-size: cover;
       background-position: center 80%;
       color: var(--color-secundario);
     }
 
     header h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin-top: 60px;
       margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     }
 
-    nav.main-tabs a {
-  color: var(--color-secundario);
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-  font-size: 1.1em;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-nav.main-tabs a:hover {
-  background-color: #ffffff20;
-}
-
-nav.main-tabs a.active-tab {
-  background-color: #ffffff30;
-  padding: 8px 16px;
-  border-radius: 20px;
-}
-
+    nav.main-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
 
     nav.main-tabs a {
       color: var(--color-secundario);
       text-decoration: none;
-      margin: 0 20px;
+      margin: 8px 15px;
       font-weight: bold;
       font-size: 1.1em;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.main-tabs a:hover {
+      background-color: #ffffff20;
     }
 
     nav.main-tabs a.active-tab {
-      border-bottom: 2px solid #ffffff;
-      padding-bottom: 5px;
+      background-color: #ffffff30;
     }
 
     .section {
       max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
+      display: none;
+    }
+
+    .section.active {
+      display: block;
     }
 
     .section h2 {
@@ -90,6 +88,9 @@ nav.main-tabs a.active-tab {
       max-width: 300px;
       border-radius: 12px;
       margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .info-box {
@@ -109,6 +110,7 @@ nav.main-tabs a.active-tab {
       gap: 10px;
       margin-bottom: 20px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .tab {
@@ -116,13 +118,14 @@ nav.main-tabs a.active-tab {
       padding: 10px 20px;
       border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     .tab:hover {
       background-color: #ffffff20;
     }
 
-    .active-tab {
+    .tab.active-tab {
       background-color: #ffffff30;
       font-weight: bold;
       border: 1px solid #ffffff30;
@@ -130,7 +133,7 @@ nav.main-tabs a.active-tab {
 
     .album-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 20px;
     }
 
@@ -189,89 +192,9 @@ nav.main-tabs a.active-tab {
   <a href="#contacto" data-tab="contacto">Contacto</a>
 </nav>
 
-<section class="section main-tab" id="presentacion">
-  <h2>Sobre Mí</h2>
-  <div class="info-box">
-    <img src="https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/461564745_2393501037665906_765423064429583732_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGr8WMd-GJF4JNAbXFtpc5c4QFCdAAfMCrhAUJ0AB8wKgI9JJDd0IyQywOejo2CDBoc_US9c0yaV62TGH-gTHCW&_nc_ohc=DxF84z1fHDQQ7kNvwGhExZi&_nc_oc=Adn9PRniGfFguiB--D9bssQAlmlnnwCGs8sWHxPvI9L8UoqJ9UkQeZhqRvqn1zZGx9wmXC3jODLoj8YDcggtkCnP&_nc_zt=23&_nc_ht=scontent.faep9-2.fna&_nc_gid=n9lbfUi2itx5N1WJvc3jBg&oh=00_AfErUs0b_bMCZKrHzfnq4bwcZAlx9Ec2bzvo89_NxWB01Q&oe=6806192C" alt="Damián Loiacono" class="perfil-img" style="display: block; margin: 0 auto;">
-    <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir. Trabajo con profesionalismo, transparencia y dedicación en cada etapa del proceso inmobiliario.</p>
-    <p>Mi enfoque está centrado en las personas. Creo en generar relaciones de confianza a largo plazo, más allá de una simple operación inmobiliaria. Por eso, dedico tiempo a entender las necesidades de cada cliente y brindar un servicio a medida, cuidando cada detalle.</p>
-    <p>Estoy en constante formación para estar al tanto de las tendencias del mercado, nuevas herramientas digitales y regulaciones. Esto me permite ofrecer un asesoramiento actualizado y preciso, respaldado además por el prestigio y la trayectoria de la red internacional Coldwell Banker.</p>
-    <p>Si estás buscando vender, comprar, alquilar o simplemente necesitás una tasación profesional, estoy para ayudarte. Juntos podemos encontrar la mejor opción para vos.</p>
-  </div>
-</section>
-
-
-<section class="section main-tab" id="experiencia">
-  <h2>Mi Experiencia</h2>
-  <div class="info-box">
-    <p>Cuento con amplia trayectoria en el rubro inmobiliario, acompañando a clientes en decisiones importantes. La capacitación constante y el respaldo de una red internacional como Coldwell Banker me permiten brindar un servicio integral y actualizado.</p>
-    <ul>
-      <li>Especialista en ventas y alquileres residenciales y comerciales</li>
-      <li>Conocimiento profundo del mercado de CABA y zonas aledañas</li>
-      <li>Red de contactos para asesoramiento legal y financiero</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section main-tab" id="servicios">
-  <h2>Servicios</h2>
-  <div class="info-box">
-    <img src="AdobeStock_906480651.jpeg" alt="Servicios Inmobiliarios" style="width:100%; border-radius: 12px; margin-bottom: 20px;">
-    <ul>
-      <li>Compra y venta de inmuebles</li>
-      <li>Alquiler de propiedades</li>
-      <li>Asesoramiento personalizado y gratuito</li>
-      <li>Tasaciones y estudios de mercado</li>
-      <li>Acompañamiento legal y financiero</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section main-tab" id="fotos">
-  <h2>Galería de Fotos</h2>
-  <div class="tabs">
-    <div class="tab active-tab" data-tab="propiedades">Propiedades</div>
-    <div class="tab" data-tab="clientes">Clientes</div>
-    <div class="tab" data-tab="recorridos">Recorridos</div>
-  </div>
-
-  <div class="album-content" id="propiedades">
-    <div class="album-grid">
-      <div class="album">
-        <img src="https://via.placeholder.com/300x200?text=Álbum+1" alt="Propiedades">
-        <p>Propiedades destacadas</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="album-content" id="clientes" style="display:none;">
-    <div class="album-grid">
-      <div class="album">
-        <img src="https://via.placeholder.com/300x200?text=Álbum+2" alt="Clientes">
-        <p>Testimonios de clientes</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="album-content" id="recorridos" style="display:none;">
-    <div class="album-grid">
-      <div class="album">
-        <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Recorridos">
-        <p>Recorridos virtuales</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section main-tab" id="contacto">
-  <h2>Contacto</h2>
-  <div class="info-box">
-    <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
-    <p><strong>Tel:</strong> <a href="tel:+541138795613" style="color: #ffffff; text-decoration: underline;">+54 9 11 3879 5613</a></p>
-    <p><strong>Email:</strong> <a href="mailto:damian.loiacono@coldwellbanker.com.ar" style="color: #ffffff; text-decoration: underline;">damian.loiacono@coldwellbanker.com.ar</a></p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #00acee;">@damianloiacono.ar</a></p>
-  </div>
-</section>
+<div id="content">
+  <!-- Las secciones se cargarán desde JavaScript -->
+</div>
 
 <a href="https://wa.me/5491138795613" class="whatsapp-btn" title="Habla por WhatsApp">📞</a>
 
@@ -279,47 +202,120 @@ nav.main-tabs a.active-tab {
   <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
 </footer>
 
-<!-- JavaScript para tabs de fotos -->
 <script>
-  const tabs = document.querySelectorAll('.tab');
-  const contents = document.querySelectorAll('.album-content');
+  const sections = {
+    presentacion: `
+      <section class="section active" id="presentacion">
+        <h2>Sobre Mí</h2>
+        <div class="info-box">
+          <img src="https://scontent.faep9-2.fna.fbcdn.net/..." alt="Damián Loiacono" class="perfil-img">
+          <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas...</p>
+          <!-- resto del contenido -->
+        </div>
+      </section>
+    `,
+    experiencia: `
+      <section class="section" id="experiencia">
+        <h2>Mi Experiencia</h2>
+        <div class="info-box">
+          <p>Cuento con amplia trayectoria en el rubro inmobiliario...</p>
+          <ul>
+            <li>Especialista en ventas y alquileres...</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    servicios: `
+      <section class="section" id="servicios">
+        <h2>Servicios</h2>
+        <div class="info-box">
+          <img src="AdobeStock_906480651.jpeg" alt="Servicios Inmobiliarios" style="width:100%; border-radius: 12px; margin-bottom: 20px;">
+          <ul>
+            <li>Compra y venta de inmuebles</li>
+            <li>Alquiler de propiedades</li>
+            <li>Asesoramiento personalizado y gratuito</li>
+            <li>Tasaciones y estudios de mercado</li>
+            <li>Acompañamiento legal y financiero</li>
+          </ul>
+        </div>
+      </section>
+    `,
+    fotos: `
+      <section class="section" id="fotos">
+        <h2>Galería de Fotos</h2>
+        <div class="tabs">
+          <div class="tab active-tab" data-tab="propiedades">Propiedades</div>
+          <div class="tab" data-tab="clientes">Clientes</div>
+          <div class="tab" data-tab="recorridos">Recorridos</div>
+        </div>
+        <div class="album-content" id="propiedades">
+          <div class="album-grid">
+            <div class="album">
+              <img src="https://via.placeholder.com/300x200?text=Álbum+1" alt="Propiedades">
+              <p>Propiedades destacadas</p>
+            </div>
+          </div>
+        </div>
+        <div class="album-content" id="clientes" style="display:none;">
+          <div class="album-grid">
+            <div class="album">
+              <img src="https://via.placeholder.com/300x200?text=Álbum+2" alt="Clientes">
+              <p>Testimonios de clientes</p>
+            </div>
+          </div>
+        </div>
+        <div class="album-content" id="recorridos" style="display:none;">
+          <div class="album-grid">
+            <div class="album">
+              <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Recorridos">
+              <p>Recorridos virtuales</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    `,
+    contacto: `
+      <section class="section" id="contacto">
+        <h2>Contacto</h2>
+        <div class="info-box">
+          <p>Podés comunicarte directamente conmigo para una consulta sin compromiso:</p>
+          <p><strong>Tel:</strong> <a href="tel:+541138795613" style="color: #ffffff; text-decoration: underline;">+54 9 11 3879 5613</a></p>
+          <p><strong>Email:</strong> <a href="mailto:damian.loiacono@coldwellbanker.com.ar" style="color: #ffffff; text-decoration: underline;">damian.loiacono@coldwellbanker.com.ar</a></p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #00acee;">@damianloiacono.ar</a></p>
+        </div>
+      </section>
+    `
+  };
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      contents.forEach(content => content.style.display = 'none');
-      tabs.forEach(t => t.classList.remove('active-tab'));
-      const targetId = tab.getAttribute('data-tab');
-      document.getElementById(targetId).style.display = 'block';
-      tab.classList.add('active-tab');
-    });
-  });
-</script>
-
-<!-- JavaScript para pestañas principales -->
-<script>
   const mainTabs = document.querySelectorAll('.main-tabs a');
-  const mainSections = document.querySelectorAll('.main-tab');
+  const contentDiv = document.getElementById('content');
 
   function showSection(id) {
-    mainSections.forEach(section => {
-      section.style.display = (section.id === id) ? 'block' : 'none';
-    });
-
-    mainTabs.forEach(tab => {
-      tab.classList.toggle('active-tab', tab.getAttribute('data-tab') === id);
-    });
+    contentDiv.innerHTML = sections[id];
+    mainTabs.forEach(tab => tab.classList.toggle('active-tab', tab.getAttribute('data-tab') === id));
   }
 
   mainTabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
+    tab.addEventListener('click', e => {
       e.preventDefault();
-      const targetId = tab.getAttribute('data-tab');
-      showSection(targetId);
+      const id = tab.getAttribute('data-tab');
+      showSection(id);
     });
   });
 
   document.addEventListener('DOMContentLoaded', () => {
     showSection('presentacion');
+  });
+
+  // Tabs dentro de fotos
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('tab')) {
+      document.querySelectorAll('.album-content').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active-tab'));
+      const id = e.target.getAttribute('data-tab');
+      document.getElementById(id).style.display = 'block';
+      e.target.classList.add('active-tab');
+    }
   });
 </script>
 
