@@ -266,6 +266,7 @@
     bottom: 20px;
     right: 20px;
     background-color: #25D366;
+    border: none;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -273,19 +274,22 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
   }
 
   .whatsapp-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   }
 
   .whatsapp-icon {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    fill: white;
+    pointer-events: none;
   }
 </style>
 
