@@ -254,27 +254,31 @@
   </div>
 </section>
 
-<a href="https://wa.me/5491138795613" class="whatsapp-btn-simple" title="Habla por WhatsApp" target="_blank" rel="noopener">
+<a href="https://wa.me/5491138795613" class="whatsapp-btn-fixed" title="Habla por WhatsApp" target="_blank" rel="noopener">
   <span class="whatsapp-icon">💬</span> WhatsApp
 </a>
 
 <style>
-  .whatsapp-btn-simple {
+  .whatsapp-btn-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     display: inline-flex;
     align-items: center;
     background-color: #25D366;
     color: white;
     font-weight: bold;
     font-size: 16px;
-    padding: 10px 18px;
+    padding: 12px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-family: Arial, sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
   }
 
-  .whatsapp-btn-simple:hover {
+  .whatsapp-btn-fixed:hover {
     background-color: #1ebe5d;
     transform: translateY(-2px);
   }
