@@ -172,7 +172,6 @@
   <a href="#presentacion" data-tab="presentacion">Presentación</a>
   <a href="#experiencia" data-tab="experiencia">Experiencia</a>
   <a href="#servicios" data-tab="servicios">Servicios</a>
-  <a href="#fotos" data-tab="fotos">Fotos</a>
   <a href="#contacto" data-tab="contacto">Contacto</a>
 </nav>
 
@@ -238,21 +237,6 @@
   <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
 </footer>
 
-<!-- JavaScript para tabs de fotos -->
-<script>
-  const tabs = document.querySelectorAll('.tab');
-  const contents = document.querySelectorAll('.album-content');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      contents.forEach(content => content.style.display = 'none');
-      tabs.forEach(t => t.classList.remove('active-tab'));
-      const targetId = tab.getAttribute('data-tab');
-      document.getElementById(targetId).style.display = 'block';
-      tab.classList.add('active-tab');
-    });
-  });
-</script>
 
 <!-- JavaScript para pestañas principales -->
 <script>
