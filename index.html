@@ -255,10 +255,41 @@
 </section>
 
 <a href="https://wa.me/5491138795613" class="whatsapp-btn" title="Habla por WhatsApp" target="_blank" rel="noopener">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28" fill="white">
     <path d="M380.9 97.1C339-21.6 223.1-31.6 153.4 35.5c-62.5 59.2-81.3 149.6-46.2 226.6L48 480l225.7-60.1c67.1 35.1 147.5 16.3 206.7-46.2 67.1-69.7 57.1-185.6-17.5-237.6zm-68.2 229.8c-8.6 24.1-43.2 44.5-68.5 47.2-27.7 3.1-64.5-6.3-114.8-39.7-52.6-34.7-84.7-83.4-86.9-129.3-2.2-48.3 18.4-89.2 57.6-112.3 21.6-12.8 47.1-19.4 73.1-19.4 34.3 0 67.5 13.5 92.3 37.9 28.3 27.8 45.6 65.8 45.6 105.8 0 27.8-7.2 55.3-21.6 78.5z"/>
   </svg>
 </a>
+
+<style>
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .whatsapp-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+</style>
 
 
 <footer>
