@@ -33,14 +33,27 @@
       margin-bottom: 10px;
     }
 
-    nav.main-tabs {
-      background-color: var(--color-terciario);
-      text-align: center;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    nav.main-tabs a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav.main-tabs a:hover {
+  background-color: #ffffff20;
+}
+
+nav.main-tabs a.active-tab {
+  background-color: #ffffff30;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
 
     nav.main-tabs a {
       color: var(--color-secundario);
@@ -179,7 +192,7 @@
 <section class="section main-tab" id="presentacion">
   <h2>Sobre Mí</h2>
   <div class="info-box">
-    <img src="https://images.unsplash.com/photo-1603415526960-f7e0328f01e1" alt="Damián Loiacono" class="perfil-img" style="display: block; margin: 0 auto;">
+    <img src="https://scontent.faep9-2.fna.fbcdn.net/v/t39.30808-6/461564745_2393501037665906_765423064429583732_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGr8WMd-GJF4JNAbXFtpc5c4QFCdAAfMCrhAUJ0AB8wKgI9JJDd0IyQywOejo2CDBoc_US9c0yaV62TGH-gTHCW&_nc_ohc=DxF84z1fHDQQ7kNvwGhExZi&_nc_oc=Adn9PRniGfFguiB--D9bssQAlmlnnwCGs8sWHxPvI9L8UoqJ9UkQeZhqRvqn1zZGx9wmXC3jODLoj8YDcggtkCnP&_nc_zt=23&_nc_ht=scontent.faep9-2.fna&_nc_gid=n9lbfUi2itx5N1WJvc3jBg&oh=00_AfErUs0b_bMCZKrHzfnq4bwcZAlx9Ec2bzvo89_NxWB01Q&oe=6806192C" alt="Damián Loiacono" class="perfil-img" style="display: block; margin: 0 auto;">
     <p>Soy Damián Loiacono, asesor inmobiliario en <strong>Coldwell Banker Beyker</strong>. Me apasiona ayudar a las personas a encontrar el lugar ideal para vivir o invertir. Trabajo con profesionalismo, transparencia y dedicación en cada etapa del proceso inmobiliario.</p>
     <p>Mi enfoque está centrado en las personas. Creo en generar relaciones de confianza a largo plazo, más allá de una simple operación inmobiliaria. Por eso, dedico tiempo a entender las necesidades de cada cliente y brindar un servicio a medida, cuidando cada detalle.</p>
     <p>Estoy en constante formación para estar al tanto de las tendencias del mercado, nuevas herramientas digitales y regulaciones. Esto me permite ofrecer un asesoramiento actualizado y preciso, respaldado además por el prestigio y la trayectoria de la red internacional Coldwell Banker.</p>
