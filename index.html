@@ -159,6 +159,21 @@
       text-align: center;
       padding: 20px;
     }
+
+    .main-tab {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    .main-tab.active {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
   </style>
 </head>
 <body>
@@ -187,7 +202,7 @@
   <h2>Mi Experiencia</h2>
   <div class="info-box">
     <p>Cuento con amplia trayectoria en el rubro inmobiliario, acompañando a clientes en decisiones importantes. La capacitación constante y el respaldo de una red internacional como Coldwell Banker me permiten brindar un servicio integral y actualizado.</p>
-    <p><p>Estoy convencido de que cada operación inmobiliaria es única, por eso mi enfoque es siempre personalizado. Además, <strong>mi consulta y asesoramiento son totalmente gratuitos</strong>, sin compromiso. Estoy acá para escucharte, orientarte y acompañarte en cada paso del proceso.</p>
+    <p>Estoy convencido de que cada operación inmobiliaria es única, por eso mi enfoque es siempre personalizado. Además, <strong>mi consulta y asesoramiento son totalmente gratuitos</strong>, sin compromiso. Estoy acá para escucharte, orientarte y acompañarte en cada paso del proceso.</p>
     <ul>
       <li>Especialista en ventas y alquileres residenciales y comerciales</li>
       <li>Conocimiento profundo del mercado de CABA y zonas aledañas</li>
@@ -210,16 +225,14 @@
   </div>
 </section>
 
-
-  <div class="album-content" id="recorridos" style="display:none;">
-    <div class="album-grid">
-      <div class="album">
-        <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Recorridos">
-        <p>Recorridos virtuales</p>
-      </div>
+<div class="album-content" id="recorridos" style="display:none;">
+  <div class="album-grid">
+    <div class="album">
+      <img src="https://via.placeholder.com/300x200?text=Álbum+3" alt="Recorridos">
+      <p>Recorridos virtuales</p>
     </div>
   </div>
-</section>
+</div>
 
 <section class="section main-tab" id="contacto">
   <h2>Contacto</h2>
@@ -237,16 +250,18 @@
   <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
 </footer>
 
-
-<!-- JavaScript para pestañas principales -->
 <script>
   const mainTabs = document.querySelectorAll('.main-tabs a');
   const mainSections = document.querySelectorAll('.main-tab');
 
   function showSection(id) {
     mainSections.forEach(section => {
-      section.style.display = (section.id === id) ? 'block' : 'none';
+      section.classList.remove('active');
     });
+    const activeSection = document.getElementById(id);
+    if (activeSection) {
+      activeSection.classList.add('active');
+    }
 
     mainTabs.forEach(tab => {
       tab.classList.toggle('active-tab', tab.getAttribute('data-tab') === id);
