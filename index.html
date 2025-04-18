@@ -66,10 +66,36 @@
     }
 
     .section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 10px 20px; /* redujimos el padding-bottom */
+}
+
+.section:last-of-type {
+  padding-bottom: 10px; /* extra seguridad */
+}
+
+.perfil-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.info-box {
+  background-color: #ffffff10;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 10px; /* menos espacio debajo */
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-primario);
+}
+
 
     .section h2 {
       font-size: 2em;
@@ -238,6 +264,7 @@
       <li>Edición y publicación de Multimedia.</li>
     </ul>
 
+    
     <!-- Valores y motivaciones -->
     <img src="https://scontent.faep9-1.fna.fbcdn.net/v/t39.30808-6/461783348_2393501020999241_669509690671367574_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEIVk5etrNjJ3gctWh991Mlz9JFbWUtzR3P0kVtZS3NHUGwGDLlgSgOwBwQi3I-enqWOL7BNjEu_j8hDnZCoOi1&_nc_ohc=Pm7yFu9RrlUQ7kNvwGN8lGh&_nc_oc=Adl_vHUn1nvouizK64BTAibe3_-6AJbxvvRnAVQGx6G04M34edB2fHgzP8xvbNN2pFTHpt6KGu_ijrfXIKbOuAoq&_nc_zt=23&_nc_ht=scontent.faep9-1.fna&_nc_gid=t0GNfEMA-g65A1KAEsBgqQ&oh=00_AfG_zK3lJojl9psAflxoL2vt4EZ1lS1UvXYDtudkHfvJrg&oe=6806E2C3" 
          alt="Damián Loiacono" 
