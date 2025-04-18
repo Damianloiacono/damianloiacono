@@ -7,6 +7,10 @@
   <style>
     html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
       margin: 0;
@@ -75,6 +79,8 @@
     }
 
     .section {
+  padding-bottom: 10px;
+  margin-bottom: 0;
       max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
@@ -92,6 +98,7 @@
     }
 
     .perfil-img {
+  margin-bottom: 10px;
       width: 100%;
       max-width: 300px;
       border-radius: 12px;
@@ -99,6 +106,7 @@
     }
 
     .info-box {
+  margin-bottom: 10px;
       background-color: #ffffff10;
       padding: 20px;
       border-radius: 8px;
@@ -349,6 +357,8 @@
 
 <style>
   .whatsapp-btn-fixed {
+  max-height: 60px;
+  overflow: hidden;
     position: fixed;
     bottom: 20px;
     right: 20px;
