@@ -6,6 +6,9 @@
   <title>Damián Loiacono - Asesor Inmobiliario</title>
   <style>
     html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
@@ -190,7 +193,11 @@
       visibility: visible;
       position: relative;
     }
-  </style>
+  main {
+  flex: 1;
+}
+
+</style>
 </head>
 <body>
 
@@ -206,6 +213,8 @@
   <a href="#servicios" data-tab="servicios">Servicios</a>
   <a href="#contacto" data-tab="contacto">Contacto</a>
 </nav>
+
+<main>
 
 <section class="section main-tab" id="presentacion">
   <h2 style="text-align: center;">Sobre Mí</h2>
@@ -369,7 +378,9 @@
   }
 </style>
 
- <footer>
+ </main>
+
+<footer>
   <p>&copy; 2025 Damián Loiacono - Coldwell Banker Beyker</p>
  </footer>
   
