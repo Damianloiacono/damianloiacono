@@ -205,6 +205,23 @@
   flex: 1;
 }
 
+
+/* === Fix extra scroll === */
+body {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 0px;
+  clear: both;
+}
+
 </style>
 </head>
 <body>
@@ -386,6 +403,23 @@
     font-size: 20px;
     margin-right: 8px;
   }
+
+/* === Fix extra scroll === */
+body {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 0px;
+  clear: both;
+}
+
 </style>
 
  </main>
