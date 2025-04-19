@@ -508,6 +508,43 @@ body::after {
       <p>📅 Podemos coordinar una videollamada o reunión presencial en nuestras oficinas. Estoy para asesorarte de forma cercana, transparente y profesional. 📅</p>
     </div>
   </div>
+<section class="section" id="formulario-contacto">
+  <h2>¿Querés que te contacte?</h2>
+  <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">
+    Completá el formulario y me comunicaré con vos lo antes posible. Todas las consultas son respondidas con atención personalizada.
+  </p>
+  <form 
+    action="mailto:damian.loiacono@coldwellbanker.com.ar" 
+    method="POST" 
+    enctype="text/plain" 
+    style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;"
+  >
+    <div>
+      <label for="nombre" style="display: block; margin-bottom: 6px;">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required 
+             style="width: 100%; padding: 10px; border-radius: 8px; border: none;">
+    </div>
+
+    <div>
+      <label for="email" style="display: block; margin-bottom: 6px;">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tucorreo@email.com" required 
+             style="width: 100%; padding: 10px; border-radius: 8px; border: none;">
+    </div>
+
+    <div>
+      <label for="mensaje" style="display: block; margin-bottom: 6px;">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Contame en qué puedo ayudarte..." rows="6" required 
+                style="width: 100%; padding: 10px; border-radius: 8px; border: none;"></textarea>
+    </div>
+
+    <button type="submit" 
+            style="background-color: #25D366; color: white; border: none; padding: 12px; border-radius: 30px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">
+      Enviar mensaje
+    </button>
+  </form>
+</section>
+
+
 </section>
 
 
