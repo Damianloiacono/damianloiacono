@@ -237,14 +237,59 @@ body::after {
 </head>
 <body>
 
-<iframe 
-  src="https://www.youtube.com/embed/HBEU2qu0it0?autoplay=1&mute=1&controls=0&loop=1&playlist=HBEU2qu0it0&modestbranding=1&rel=0&showinfo=0"
-  id="background-video"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  allowfullscreen
-  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1; opacity: 0.15; pointer-events: none;">
-</iframe>
+<style>
+  #video-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  #video-background-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.77vh; /* 100 * 16 / 9 */
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    opacity: 0.15;
+    pointer-events: none;
+    border: none;
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    #video-background-container iframe {
+      width: 100vw;
+      height: 56.25vw; /* 100 / (16 / 9) */
+    }
+  }
+
+  @media (max-width: 768px) {
+    #video-background-container iframe {
+      width: 100vw !important;
+      height: 56.25vw !important;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+</style>
+
+<div id="video-background-container">
+  <iframe
+    src="https://www.youtube.com/embed/HBEU2qu0it0?autoplay=1&mute=1&controls=0&loop=1&playlist=HBEU2qu0it0&modestbranding=1&rel=0&showinfo=0"
+    title="Video de fondo"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+
 
 
 <header>
