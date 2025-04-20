@@ -233,9 +233,28 @@ body::after {
   clear: both;
 }
 
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
 </style>
 </head>
 <body>
+
+<video autoplay muted loop playsinline id="background-video">
+  <source src="Historia 2.mp4" type="video/mp4">
+  Tu navegador no soporta el video en HTML5.
+</video>
+
 
 <header>
   <h1>D.L.</h1>
@@ -437,39 +456,52 @@ body::after {
     <p>¿Querés dar el primer paso en tu próxima operación inmobiliaria? Estoy a tu disposición para responder dudas, asesorarte sin compromiso y acompañarte en todo el proceso con atención personalizada.</p>
 
     <div class="contact-details" style="text-align: center; margin: 30px 0;">
-      <p style="margin-bottom: 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Teléfono" style="width: 20px; vertical-align: middle; margin-right: 6px;">
-        <strong>Tel:</strong>
-        <a href="tel:+541138795613" style="color: #ffffff; text-decoration: underline; font-weight: 500;">+54 9 11 3879 5613</a>
-      </p>
-      <p>
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; vertical-align: middle; margin-right: 6px;">
-        <strong>Email:</strong>
-        <a href="mailto:damian.loiacono@coldwellbanker.com.ar" style="color: #ffffff; text-decoration: underline; font-weight: 500;">damian.loiacono@coldwellbanker.com.ar</a>
-      </p>
-    </div>
+  <p style="margin-bottom: 10px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Teléfono" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+    <strong>Tel:</strong>
+    <a href="tel:+541138795613" style="color: #ffffff; text-decoration: underline; font-weight: 500;">+54 9 11 3879 5613</a>
+  </p>
+  <p>
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+    <strong>Email:</strong>
+    <a href="mailto:damian.loiacono@coldwellbanker.com.ar" style="color: #ffffff; text-decoration: underline; font-weight: 500;">damian.loiacono@coldwellbanker.com.ar</a>
+  </p>
+</div>
 
-    <div class="social-links" style="text-align: center; margin-top: 30px;">
-      <p><strong>Redes y plataformas:</strong></p>
-      <ul class="social-list" style="list-style: none; padding-left: 0; display: inline-block; text-align: left;">
-        <li class="social-item" style="margin-bottom: 10px;">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 20px; vertical-align: middle; margin-right: 6px;">
-          <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #ffffff; text-decoration: underline;">@damianloiacono.ar</a>
-        </li>
-        <li class="social-item" style="margin-bottom: 10px;">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 20px; vertical-align: middle; margin-right: 6px;">
-          <a href="https://www.facebook.com/DamianLoiacono.ar/" target="_blank" style="color: #ffffff; text-decoration: underline;">/DamianLoiacono.ar</a>
-        </li>
-        <li class="social-item" style="margin-bottom: 10px;">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle; margin-right: 6px;">
-          <a href="https://www.linkedin.com/in/damian-loiacono/" target="_blank" style="color: #ffffff; text-decoration: underline;">/damian-loiacono</a>
-        </li>
-        <li class="social-item" style="margin-bottom: 10px;">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 20px; vertical-align: middle; margin-right: 6px;">
-          <a href="https://www.youtube.com/@DamianLoiacono" target="_blank" style="color: #ffffff; text-decoration: underline;">@damianloiacono</a>
-        </li>
-      </ul>
-    </div>
+   <div class="social-links" style="text-align: center; margin-top: 30px;">
+  <p><strong>Redes y plataformas:</strong></p>
+  <ul class="social-list" style="list-style: none; padding-left: 0; display: inline-block; text-align: left;">
+    
+    <li class="social-item" style="margin-bottom: 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      <a href="https://instagram.com/damianloiacono.ar" target="_blank" style="color: #ffffff; text-decoration: underline;">
+        @damianloiacono.ar
+      </a>
+    </li>
+
+    <li class="social-item" style="margin-bottom: 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      <a href="https://www.facebook.com/DamianLoiacono.ar/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+        /DamianLoiacono.ar
+      </a>
+    </li>
+
+    <li class="social-item" style="margin-bottom: 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      <a href="https://www.linkedin.com/in/damian-loiacono/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+        /damian-loiacono
+      </a>
+    </li>
+
+    <li class="social-item" style="margin-bottom: 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      <a href="https://www.youtube.com/@DamianLoiacono" target="_blank" style="color: #ffffff; text-decoration: underline;">
+        @damianloiacono
+      </a>
+    </li>
+
+  </ul>
+</div>
 
     <div class="external-links" style="text-align: center; margin-top: 30px;">
       <p><strong>Páginas de referencia:</strong></p>
@@ -494,38 +526,8 @@ body::after {
     <div class="cta-box" style="margin-top: 20px;">
       <p>📅 Podemos coordinar una videollamada o reunión presencial en nuestras oficinas. Estoy para asesorarte de forma cercana, transparente y profesional. 📅</p>
     </div>
-
-    <!-- Formulario de contacto -->
-    <div class="contact-form" style="margin-top: 40px;">
-      <h3 style="text-align: center; margin-bottom: 20px;">🏡 Enviame tu consulta</h3>
-      <form action="mailto:damian.loiacono@coldwellbanker.com.ar" method="post" enctype="text/plain" style="max-width: 600px; margin: 0 auto;">
-        <label for="nombre" style="display: block; margin-bottom: 10px;">
-          🧑 Nombre:
-          <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-top: 5px;">
-        </label>
-        <label for="email" style="display: block; margin-bottom: 10px;">
-          📧 Email:
-          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-top: 5px;">
-        </label>
-        <label for="asunto" style="display: block; margin-bottom: 10px;">
-          🏷️ Asunto:
-          <input type="text" id="asunto" name="asunto" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-top: 5px;">
-        </label>
-        <label for="mensaje" style="display: block; margin-bottom: 20px;">
-          ✍️ Mensaje:
-          <textarea id="mensaje" name="mensaje" rows="5" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-top: 5px;"></textarea>
-        </label>
-        <div style="text-align: center;">
-          <button type="submit" style="background-color: #2a9d8f; color: white; padding: 12px 24px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold;">
-            📨 Enviar consulta
-          </button>
-        </div>
-      </form>
-    </div>
-
   </div>
 </section>
-
 
 
 
