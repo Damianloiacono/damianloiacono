@@ -234,6 +234,7 @@ body::after {
 }
 
 
+
 @keyframes headerZoom {
   0% {
     background-size: 100%;
@@ -247,7 +248,40 @@ body::after {
 }
 
 header {
-  animation: headerZoom 20s ease-in-out infinite;
+  animation: headerZoom 12s ease-in-out infinite;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.section.slide-in {
+  opacity: 0;
+  animation: slideIn 1.2s ease-out forwards;
 }
 </style>
 </head>
@@ -294,6 +328,7 @@ header {
     }
   }
 
+
 @keyframes headerZoom {
   0% {
     background-size: 100%;
@@ -307,7 +342,40 @@ header {
 }
 
 header {
-  animation: headerZoom 20s ease-in-out infinite;
+  animation: headerZoom 12s ease-in-out infinite;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.section.slide-in {
+  opacity: 0;
+  animation: slideIn 1.2s ease-out forwards;
 }
 </style>
 
@@ -341,7 +409,7 @@ header {
 
 <main>
 
-<section class="section main-tab" id="presentacion">
+<section class="section main-tab" id="presentacion" fade-in>
   <h2 style="text-align: center;">Sobre Mí</h2>
   <div class="info-box">
 
@@ -399,7 +467,7 @@ header {
     </div>
 </section>
  
-<section class="section main-tab" id="experiencia">
+<section class="section main-tab" id="experiencia" slide-in>
   <h2>Mi Experiencia</h2>
   <div class="info-box">
 
@@ -457,7 +525,7 @@ header {
   </div>
 </section>
 
-<section class="section main-tab" id="servicios">
+<section class="section main-tab" id="servicios" fade-in>
   <h2>Servicios</h2>
   <div class="info-box">
     
@@ -515,7 +583,7 @@ header {
   </div>
 </div>
 
-<section class="section main-tab" id="contacto">
+<section class="section main-tab" id="contacto" slide-in>
   <h2>Contacto</h2>
   <div class="info-box">
 
@@ -654,6 +722,7 @@ body::after {
 }
 
 
+
 @keyframes headerZoom {
   0% {
     background-size: 100%;
@@ -667,7 +736,40 @@ body::after {
 }
 
 header {
-  animation: headerZoom 20s ease-in-out infinite;
+  animation: headerZoom 12s ease-in-out infinite;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.section.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.section.slide-in {
+  opacity: 0;
+  animation: slideIn 1.2s ease-out forwards;
 }
 </style>
 
@@ -709,5 +811,23 @@ header {
   });
   
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section.fade-in, .section.slide-in').forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
+
 </body>
 </html>
