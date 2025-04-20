@@ -238,23 +238,63 @@ body::after {
 <body>
 
 <iframe 
-  src="https://www.youtube.com/embed/fhqflNguKPA?autoplay=1&mute=1&controls=0&loop=1&playlist=fhqflNguKPA&modestbranding=1&rel=0&showinfo=0"
-  id="background-video-1"
+  src="https://www.youtube.com/embed/fhqflNguKPA?enablejsapi=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0"
+  id="video1"
   frameborder="0"
   allow="autoplay; encrypted-media"
   allowfullscreen
-  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -2; opacity: 0.12; pointer-events: none;">
+  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; opacity: 0.15; pointer-events: none;">
 </iframe>
-
 
 <iframe 
-  src="https://www.youtube.com/embed/sYwW8H1CLqE?autoplay=1&mute=1&controls=0&loop=1&playlist=sYwW8H1CLqE&modestbranding=1&rel=0&showinfo=0"
-  id="background-video-2"
+  src="https://www.youtube.com/embed/sYwW8H1CLqE?enablejsapi=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0"
+  id="video2"
   frameborder="0"
   allow="autoplay; encrypted-media"
   allowfullscreen
-  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1; opacity: 0.08; pointer-events: none;">
+  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; opacity: 0; pointer-events: none;">
 </iframe>
+
+<script>
+  let current = 0;
+  const players = [];
+  const ids = ['video1', 'video2'];
+
+  function onYouTubeIframeAPIReady() {
+    ids.forEach((id, index) => {
+      players[index] = new YT.Player(id, {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    });
+  }
+
+  function onPlayerReady(event) {
+    if (event.target.getIframe().id === 'video1') {
+      event.target.playVideo();
+    }
+  }
+
+  function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+      const next = (current + 1) % 2;
+      players[next].getIframe().style.opacity = '0.15';
+      players[current].getIframe().style.opacity = '0';
+      players[next].getIframe().style.zIndex = '-1';
+      players[current].getIframe().style.zIndex = '-2';
+      players[next].playVideo();
+      current = next;
+    }
+  }
+
+  // Insertar la API de YouTube
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
 
 
 
