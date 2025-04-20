@@ -309,31 +309,12 @@ body::after {
 
   #header-video-container iframe {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 177.77vh;
-    height: 100vh;
-    transform: translate(-50%, -50%);
-    opacity: 0.15;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
     pointer-events: none;
     border: none;
-  }
-
-  @media (max-aspect-ratio: 16/9) {
-    #header-video-container iframe {
-      width: 100vw;
-      height: 56.25vw;
-    }
-  }
-
-  @media (max-width: 768px) {
-    #header-video-container iframe {
-      width: 100vw;
-      height: 100vh;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(2.10);
-    }
   }
 
   header {
@@ -351,6 +332,9 @@ body::after {
     allowfullscreen>
   </iframe>
 </div>
+
+
+
 
   <h1>D.L.</h1>
   <p>Beyker</p>
