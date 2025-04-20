@@ -235,7 +235,21 @@ body::after {
 
 
 
+@keyframes headerZoom {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 105%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
 
+header {
+  animation: headerZoom 12s ease-in-out infinite;
+}
 
 
 @keyframes fadeIn {
@@ -270,7 +284,7 @@ body::after {
   animation: slideIn 1.2s ease-out forwards;
 }
 
-@keyframes kenburns {
+@keyframes kenburnsTitle {
   0% {
     transform: scale(1) translate(0, 0);
   }
@@ -282,18 +296,57 @@ body::after {
   }
 }
 
-header::before {
+header h1::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -40px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
   background-image: inherit;
   background-size: cover;
   background-position: center;
   z-index: -1;
-  animation: kenburns 30s ease-in-out infinite;
+  animation: kenburnsTitle 20s ease-in-out infinite;
+  opacity: 1;
+  border-radius: 12px;
+}
+header h1 {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Barra de navegación mejorada y forzada */
+.main-tabs {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  padding: 0.75rem 1rem !important;
+  background-color: rgba(1, 33, 105, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+}
+
+/* Botones */
+.main-tabs a {
+  color: white !important;
+  text-decoration: none !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 6px !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+/* Hover y activo */
+.main-tabs a:hover,
+.main-tabs a.active-tab {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-1px) !important;
 }
 </style>
 </head>
@@ -341,7 +394,21 @@ header::before {
   }
 
 
+@keyframes headerZoom {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 105%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
 
+header {
+  animation: headerZoom 12s ease-in-out infinite;
+}
 
 
 @keyframes fadeIn {
@@ -376,7 +443,7 @@ header::before {
   animation: slideIn 1.2s ease-out forwards;
 }
 
-@keyframes kenburns {
+@keyframes kenburnsTitle {
   0% {
     transform: scale(1) translate(0, 0);
   }
@@ -388,18 +455,57 @@ header::before {
   }
 }
 
-header::before {
+header h1::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -40px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
   background-image: inherit;
   background-size: cover;
   background-position: center;
   z-index: -1;
-  animation: kenburns 30s ease-in-out infinite;
+  animation: kenburnsTitle 20s ease-in-out infinite;
+  opacity: 1;
+  border-radius: 12px;
+}
+header h1 {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Barra de navegación mejorada y forzada */
+.main-tabs {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  padding: 0.75rem 1rem !important;
+  background-color: rgba(1, 33, 105, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+}
+
+/* Botones */
+.main-tabs a {
+  color: white !important;
+  text-decoration: none !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 6px !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+/* Hover y activo */
+.main-tabs a:hover,
+.main-tabs a.active-tab {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-1px) !important;
 }
 </style>
 
@@ -747,7 +853,21 @@ body::after {
 
 
 
+@keyframes headerZoom {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 105%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
 
+header {
+  animation: headerZoom 12s ease-in-out infinite;
+}
 
 
 @keyframes fadeIn {
@@ -782,7 +902,7 @@ body::after {
   animation: slideIn 1.2s ease-out forwards;
 }
 
-@keyframes kenburns {
+@keyframes kenburnsTitle {
   0% {
     transform: scale(1) translate(0, 0);
   }
@@ -794,18 +914,57 @@ body::after {
   }
 }
 
-header::before {
+header h1::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -40px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
   background-image: inherit;
   background-size: cover;
   background-position: center;
   z-index: -1;
-  animation: kenburns 30s ease-in-out infinite;
+  animation: kenburnsTitle 20s ease-in-out infinite;
+  opacity: 1;
+  border-radius: 12px;
+}
+header h1 {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* Barra de navegación mejorada y forzada */
+.main-tabs {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  padding: 0.75rem 1rem !important;
+  background-color: rgba(1, 33, 105, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+}
+
+/* Botones */
+.main-tabs a {
+  color: white !important;
+  text-decoration: none !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 6px !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+/* Hover y activo */
+.main-tabs a:hover,
+.main-tabs a.active-tab {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-1px) !important;
 }
 </style>
 
