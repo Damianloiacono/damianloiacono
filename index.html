@@ -235,21 +235,7 @@ body::after {
 
 
 
-@keyframes headerZoom {
-  0% {
-    background-size: 100%;
-  }
-  50% {
-    background-size: 105%;
-  }
-  100% {
-    background-size: 100%;
-  }
-}
 
-header {
-  animation: headerZoom 12s ease-in-out infinite;
-}
 
 
 @keyframes fadeIn {
@@ -282,6 +268,32 @@ header {
 .section.slide-in {
   opacity: 0;
   animation: slideIn 1.2s ease-out forwards;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: kenburns 30s ease-in-out infinite;
 }
 </style>
 </head>
@@ -329,21 +341,7 @@ header {
   }
 
 
-@keyframes headerZoom {
-  0% {
-    background-size: 100%;
-  }
-  50% {
-    background-size: 105%;
-  }
-  100% {
-    background-size: 100%;
-  }
-}
 
-header {
-  animation: headerZoom 12s ease-in-out infinite;
-}
 
 
 @keyframes fadeIn {
@@ -376,6 +374,32 @@ header {
 .section.slide-in {
   opacity: 0;
   animation: slideIn 1.2s ease-out forwards;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: kenburns 30s ease-in-out infinite;
 }
 </style>
 
@@ -723,21 +747,7 @@ body::after {
 
 
 
-@keyframes headerZoom {
-  0% {
-    background-size: 100%;
-  }
-  50% {
-    background-size: 105%;
-  }
-  100% {
-    background-size: 100%;
-  }
-}
 
-header {
-  animation: headerZoom 12s ease-in-out infinite;
-}
 
 
 @keyframes fadeIn {
@@ -770,6 +780,32 @@ header {
 .section.slide-in {
   opacity: 0;
   animation: slideIn 1.2s ease-out forwards;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: kenburns 30s ease-in-out infinite;
 }
 </style>
 
