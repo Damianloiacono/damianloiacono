@@ -233,27 +233,17 @@ body::after {
   clear: both;
 }
 
-
-#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0.15;
-  pointer-events: none;
-}
-
 </style>
 </head>
 <body>
 
-<video autoplay muted loop playsinline id="background-video">
-  <source src="Historia 2.mp4" type="video/mp4">
-  Tu navegador no soporta el video en HTML5.
-</video>
+<iframe 
+  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FDamianLoiacono.ar%2Fvideos%2F1754635035265929%2F&show_text=0&autoplay=1&mute=1&loop=1"
+  id="background-video"
+  allow="autoplay; encrypted-media"
+  allowfullscreen
+  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1; opacity: 0.15; pointer-events: none; border: none;">
+</iframe>
 
 
 <header>
